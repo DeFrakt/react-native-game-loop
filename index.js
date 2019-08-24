@@ -8,14 +8,14 @@ import App from './App';
 import {name as appName} from './app.json';
 
 const { width: WIDTH, height: HEIGHT } = Dimensions.get("window");
-const RADIUS = 80;
+
  
 export default class BestGameEver extends PureComponent {
   constructor() {
     super();
     this.state = {
-      x: WIDTH / 2 - RADIUS,
-      y: HEIGHT / 2 - RADIUS
+      x: WIDTH / 8,
+      y: HEIGHT / 8
     };
   }
  
@@ -34,6 +34,7 @@ export default class BestGameEver extends PureComponent {
       <GameLoop style={styles.container} onUpdate={this.updateHandler}>
  
         <View style={[styles.player, { left: this.state.x, top: this.state.y }]} />
+    
  
       </GameLoop>
     );
@@ -48,9 +49,10 @@ const styles = StyleSheet.create({
   player: {
     position: "relative",
     backgroundColor: "red",
-    width: RADIUS * 2,
-    height: RADIUS * 2,
-    borderRadius: RADIUS * 2
+    width: 50,
+    height: 50,
+    borderRadius: 2
   }
+  
 });
-AppRegistry.registerComponent(appName, () => BestGameEver);
+AppRegistry.registerComponent(appName, () => App);
