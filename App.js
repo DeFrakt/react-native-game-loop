@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 const App = () => {
-  return (
+    return (
     <View style={styles.container}>
       <View style={{flexDirection: "row"}} >
         <View style={[styles.tile, {borderLeftWidth: 0, borderTopWidth: 0}]}>
@@ -37,7 +37,6 @@ const App = () => {
         <View style={[styles.tile, {borderBottomWidth: 0}]} />
         <View style={[styles.tile, {borderBottomWidth: 0, borderRightWidth: 0}]} />
       </View>
-
     </View>
   );
 };
